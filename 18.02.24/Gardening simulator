@@ -1,0 +1,34 @@
+    
+class plant:
+    def __init__(self, sun, water, wind, snow):
+        self.sun=sun
+        self.water=water
+        self.wind=wind
+        self.snow=snow
+
+plants = [plant(False, 3,True,3),plant(True,2,True,3),plant(False,5,False,5)]
+ 
+ 
+print('please enter Y for yes or N for no')
+sunny = input('is it sunny today')
+water = input('enter  the precipitation number')
+windy = input('is it windy today')
+snow= input('enter the amount of snow')
+for p in plants:
+    if p.sun == True and sunny=='Y' or p.sun == False and sunny == 'N':
+        print("this plant can survive with in the sunny condition")
+    else:
+        print('this plant can`t survive with in the sunny condition')
+    if p.water <= int(water):
+        print('this plant can survive with this amount of water')
+    else:
+        print('this plant can`t survive with this amount of water')
+    if p.wind == True and windy=='Y' or p.wind == False and windy == 'N':
+        print("this plant can survive with in the windy condition")
+    else:
+        print('this plant can`t survive with in the sunny condition')
+    if p.snow < int(snow):
+        print("this plant can survive with the snow condition")
+    else:
+        print('this plant can`t survive with the snow condition')
+    
