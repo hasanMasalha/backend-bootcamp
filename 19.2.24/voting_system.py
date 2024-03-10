@@ -34,7 +34,7 @@ for i in range(1, 21):
     addr = f"Address{i}"
     
     voter = {"name": name, "age": age, "addr": addr}
-    persons.append(voter)
+    voters.append(voter)
 
 
 
