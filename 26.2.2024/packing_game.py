@@ -40,7 +40,7 @@ class bag:
                 print(item1.id)
 
 
-
+### clean implementaion, with a little dry. did you think about it?
 class universal_charger(item):
     def __init__(self,id,weight,color,price,size,brand):
         self.color = color
@@ -121,7 +121,7 @@ class smartwatch(item):
             return "smartwatch"
 
 
-
+### dry + hardcoding in test_bag. think how you can make it dynamic
 
 def test_bag():
     # Creating items
