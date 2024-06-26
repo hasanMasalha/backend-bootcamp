@@ -1,0 +1,27 @@
+version: '3.9'
+
+services:
+  mongo:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  image_service:
+    build:
+      context: ./image_service
+      dockerfile: Dockerfile
+    container_name: image_service
+    depends_on:
+      - mongo
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./image_service:/app
+    environment:
+      MONGO_URI: "mongodb://mongo:27017"
+
+volumes:
+  mongo-data:
